@@ -34,6 +34,7 @@ public class PrimeFinder_Q4 {
     public static void main(String[] args) {
         if(args.length < 1){
             System.out.println("usage: java PrimeFinder_Q4 <max-range>");
+            return;
         }
         int maxRange = Integer.parseInt(args[0]);
         System.out.println("Twin prime pairs between 2 and " + maxRange);

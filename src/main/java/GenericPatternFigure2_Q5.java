@@ -21,31 +21,25 @@ public class GenericPatternFigure2_Q5 {
         char pattern2 = args[1].charAt(0);
         int maxLength = Integer.parseInt(args[2]);
         for (int i = 1;i <=maxLength/2;++i){
-            for(int j = 1;j <= i;++j){
-                System.out.print(pattern1);
-            }
-            for (int j = i+1;j <=maxLength/2;++j){
-                System.out.print(pattern2);
-                System.out.print(pattern2);
-            }
-            for(int j = 1;j <= i;++j){
-                System.out.print(pattern1);
-            }
-            System.out.println();
+            drawPatterns(pattern1, pattern2, maxLength, i);
         }
         for (int i = maxLength/2;i >=1;--i){
-            for(int j = 1;j <= i;++j){
-                System.out.print(pattern1);
-            }
-            for (int j = i+1;j <=maxLength/2;++j){
-                System.out.print(pattern2);
-                System.out.print(pattern2);
-            }
-            for(int j = 1;j <= i;++j){
-                System.out.print(pattern1);
-            }
-            System.out.println();
+            drawPatterns(pattern1, pattern2, maxLength, i);
         }
 
+    }
+
+    private static void drawPatterns(char pattern1, char pattern2, int maxLength, int i) {
+        for(int j = 1;j <= i;++j){
+            System.out.print(pattern1);
+        }
+        for (int j = i+1;j <=maxLength/2;++j){
+            System.out.print(pattern2);
+            System.out.print(pattern2);
+        }
+        for(int j = 1;j <= i;++j){
+            System.out.print(pattern1);
+        }
+        System.out.println();
     }
 }
